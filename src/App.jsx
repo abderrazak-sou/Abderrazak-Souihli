@@ -1,16 +1,19 @@
 import './App.css';
-import photo from './assets/photo.jpg';
+
 import StudentCard from './compenents/StudentCard.jsx';
 import Header from './compenents/Header.jsx';
 import Navbar from './compenents/Navbar.jsx';
 import Footer from './compenents/Footer.jsx';
 import photo2 from './assets/photo2.png';
 import photo3 from './assets/photo3.png';
+import photo4 from './assets/photo4.png';
+import photo from './assets/photo.jpg';
+import { useState } from 'react';
 
 
+function App(){
 
-
-const etudiant=[
+const [etudiant,setEtudiant]=useState([
   {
     prenom: "Abderrzak",
     nom: "Souihli",
@@ -46,11 +49,28 @@ const etudiant=[
   },
 
 
-];
+]);
+
+
 
  
-function App() {
+
+  function ajouterEtudiant(){
+    const nouveletudiant={
+      nom: "mortadha",
+      prenom: "bouzid",
+      email: "mortadhabou@gmail.com",
+      telephone: "+216 11 444 555",
+      filiere: "Génie Logiciel et Systèmes d'Information",
+      anne: "2ème année",
+      groupe: "GLSI 2",
+      ville: "Mahdia",
+      image: photo4,
+    };
+    setEtudiant([...etudiant,nouveletudiant]);
+  }
   return (
+    
     <div className="container">
       <Header />
       <Navbar />
@@ -74,9 +94,19 @@ function App() {
         ))}
       </div>
 
+      <div className="actions">
+      <button onClick={ajouterEtudiant}>+Ajouter un etudiant</button>
+      </div>
+
       <Footer />
     </div>
+
+   
   );
+
+  
+   
 }
+
 
 export default App;
