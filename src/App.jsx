@@ -1,12 +1,16 @@
-
 import './App.css';
 import photo from './assets/photo.jpg';
 import StudentCard from './compenents/StudentCard.jsx';
 import Header from './compenents/Header.jsx';
 import Navbar from './compenents/Navbar.jsx';
 import Footer from './compenents/Footer.jsx';
+import photo2 from './assets/photo2.png';
+import photo3 from './assets/photo3.png';
 
-const etudiant = [
+
+
+
+const etudiant=[
   {
     prenom: "Abderrzak",
     nom: "Souihli",
@@ -19,18 +23,32 @@ const etudiant = [
     image: photo,
   },
   {
-    prenom: "Sarra",
-    nom: "hjjj",
-    email: "zshbzknd@gmail.com",
-    telephone: "+216 24 662 978",
+    prenom: "mohamed",
+    nom: "ben marzouk",
+    email: "muhamed@gmail.com",
+    telephone: "+216 33 474 978",
     filiere: "Génie Logiciel et Systèmes d'Information",
-    anne: "1ère année",
-    groupe: "GLSI 1",
+    anne: "2ère année",
+    groupe: "GLSI 2",
     ville: "Mahdia",
-    
+    image: photo2,
   },
+  {
+    prenom: "iheb",
+    nom: "belhuichet",
+    email: "ihebbb2@gmail.com",
+    telephone: "+216 56 468 123",
+    filiere: "Génie Logiciel et Systèmes d'Information",
+    anne: "2ème année",
+    groupe: "GLSI 2",
+    ville: "Mahdia",
+    image: photo3,
+  },
+
+
 ];
 
+ 
 function App() {
   return (
     <div className="container">
